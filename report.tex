@@ -119,14 +119,17 @@
 %
 % Settings for citations and the bibliography
 %
+\usepackage{url}
 \usepackage[%
 	backend     = biber,
 	maxbibnames = 99,
 	autocite    = footnote,
-	citestyle   = verbose-ibid,
-	firstinits=true,
+    style=alphabetic,
+    citestyle=authoryear,
+%	firstinits=true,
 ]{biblatex}
 %\bibliography{bib/dissertation}
+\bibliography{bibliography}
 %
 % Format footnotes
 % From: http://latex-community.org/forum/viewtopic.php?t=6781
@@ -318,7 +321,56 @@
     Xilinx and Nvidia websites accessed in 2018.
     \label{fig:MW-Plots}}
 \end{figure}
+\begin{table}[ht]
+\caption{Database} % title of Table
+\centering 
+\begin{tabular}{c|r|r|r|r|r|r}
+\hline
+Title & Type & Power (W) & Latency (ms) & Images/sec & Images/Joule & Accuracy\\
+\hline
+\cite{Jiao2017} & FPGA & 2.3 & 9.41 & 106.0 & 46.90 & 73.1 \\
+\cite{Lu2017} & FPGA & 23.6 & 336.33 & 95.1 & 4.03 & 90.0 \\
+\cite{Qiu2016} & FPGA & 9.6 & 224.60 & 4.5 & 0.46 & 86.7 \\
+\cite{Li2016} & FPGA & 30.2 & 71.61 & 391.0 & 12.95 & 80.1 \\
+\cite{Ma2018} & FPGA & 21.2 & 47.97 & 20.8 & 0.98 & 90.0 \\
+\cite{Ma2018} & FPGA & 21.2 & 12.70 & 78.7 & 3.71 & 92.2 \\
+\cite{Podili2017} & FPGA & 8.0 & 142.30 & 7.0 & 0.87 & 88.1 \\
+\cite{Yu2017a} & FPGA & 20.0 & 42.11 & 47.5 & 2.37 & 90.0 \\
+\cite{Guo2018} & FPGA & 3.5 & 364.00 & 2.7 & 0.78 & 88.1 \\
+\cite{Venieris2016} & FPGA & 5.0 & 249.38 & 4.0 & 0.80 & 90.0 \\
+\cite{Gokhale2017} & FPGA & 9.5 & 27.55 & 36.3 & 3.81 & 89.0 \\
+\cite{Gokhale2017} & FPGA & 9.6 & 17.70 & 56.5 & 5.88 & 92.2 \\
+\cite{Gokhale2017} & FPGA & 9.5 & 100.30 & 1276.2 & 134.62 & 80.1 \\
+DeePhi:Aristotle & FPGA & 3.0 & 519.00 & 3.9 & 1.28 & 90.0 \\
+DeePhi:Aristotle & FPGA & 12.0 & 105.06 & 19.0 & 1.59 & 90.0 \\
+Xilinx Numbers & FPGA & 4.5 & 6.40 & 156.3 & 34.72 & 89.0 \\
+\cite{Guo2018} & mGPU & 10.0 & 96.50 & 10.4 & 1.04 & 88.5 \\
+\cite{Nvidia2015} & mGPU & 5.1 & 14.93 & 67.0 & 13.14 & 80.1 \\
+\cite{Nvidia2015} & mGPU & 5.7 & 496.12 & 258.0 & 45.26 & 80.1 \\
+Nvidia Blog & mGPU & 5.6 & 5.62 & 178.0 & 31.79 & 80.1 \\
+Nvidia Blog & mGPU & 5.6 & 276.46 & 463.0 & 82.68 & 80.1 \\
+\cite{Nvidia2015} & mGPU & 4.0 & 30.30 & 33.0 & 8.25 & 89.0 \\
+\cite{Nvidia2015} & mGPU & 5.8 & 853.33 & 75.0 & 12.93 & 89.0 \\
+Nvidia Blog & mGPU & 4.8 & 7.25 & 138.0 & 28.75 & 89.0 \\
+Nvidia Blog & mGPU & 5.9 & 653.06 & 196.0 & 33.22 & 89.0 \\
+\cite{Nvidia2018} & mGPU & 6.0 & 104.40 & 9.6 & 1.60 & 90.0 \\
+\cite{Nvidia2015} & GPU & 164.0 & 2.47 & 405.0 & 2.47 & 80.1 \\
+\cite{Nvidia2015} & GPU & 227.0 & 39.80 & 3216.0 & 14.17 & 80.1 \\
+Embedded& GPU & 225.0 & 11.98 & 83.5 & 0.37 & 90.0 \\
+\cite{Nvidia2015} & GPU & 119.0 & 7.25 & 138.0 & 1.16 & 89.0 \\
+\cite{Nvidia2015} & GPU & 225.0 & 148.32 & 863.0 & 3.84 & 89.0 \\
+NCS & NPU & 1.0 & 108.95 & 9.2 & 9.18 & 89.0 \\
+CNN  & GPU & 225.0 & 35.03 & 456.8 & 2.03 & 92.2 \\
 
+\hline
+\end{tabular}
+\end{table}
+
+
+
+%\bibliographystyle{plain}
+%bibliography{bibliography}
+\printbibliography
 
 \end{document}
 %
